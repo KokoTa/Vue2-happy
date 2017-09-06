@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'Hello',
-      component: () => import('@/components/Hello')
+      component: () => import('@/page/home')
     }
   ]
 })
