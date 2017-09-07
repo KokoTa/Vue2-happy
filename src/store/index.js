@@ -31,7 +31,7 @@ const state = {
 			"topic_answer_id": 2,
 			"topic_id": 20,
 			"answer_name": "正确答案",
-			"is_standard_answer": 0
+			"is_standard_answer": 1
 		}, {
 			"topic_answer_id": 3,
 			"topic_id": 20,
@@ -41,7 +41,7 @@ const state = {
 			"topic_answer_id": 4,
 			"topic_id": 20,
 			"answer_name": "答案dddd",
-			"is_standard_answer": 1
+			"is_standard_answer": 0
 		}]
 	}, {
 		"topic_id": 21,
@@ -57,7 +57,7 @@ const state = {
 			"topic_answer_id": 5,
 			"topic_id": 21,
 			"answer_name": "答案A",
-			"is_standard_answer": 1
+			"is_standard_answer": 0
 		}, {
 			"topic_answer_id": 6,
 			"topic_id": 21,
@@ -67,7 +67,7 @@ const state = {
 			"topic_answer_id": 7,
 			"topic_id": 21,
 			"answer_name": "正确答案",
-			"is_standard_answer": 0
+			"is_standard_answer": 1
 		}, {
 			"topic_answer_id": 8,
 			"topic_id": 21,
@@ -88,7 +88,7 @@ const state = {
 			"topic_answer_id": 9,
 			"topic_id": 21,
 			"answer_name": "测试A",
-			"is_standard_answer": 1
+			"is_standard_answer": 0
 		}, {
 			"topic_answer_id": 10,
 			"topic_id": 21,
@@ -103,7 +103,7 @@ const state = {
 			"topic_answer_id": 12,
 			"topic_id": 21,
 			"answer_name": "正确答案",
-			"is_standard_answer": 0
+			"is_standard_answer": 1
 		}]
 	}, {
 		"topic_id": 21,
@@ -150,12 +150,12 @@ const state = {
 			"topic_answer_id": 17,
 			"topic_id": 21,
 			"answer_name": "错误答案",
-			"is_standard_answer": 1
+			"is_standard_answer": 0
 		}, {
 			"topic_answer_id": 18,
 			"topic_id": 21,
 			"answer_name": "正确答案",
-			"is_standard_answer": 0
+			"is_standard_answer": 1
 		}, {
 			"topic_answer_id": 19,
 			"topic_id": 21,

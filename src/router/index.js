@@ -7,8 +7,18 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Hello',
+      name: 'home',
       component: () => import('@/page/home')
+    },
+    {
+    	path: '/item',
+    	name: 'item',
+    	component: () => import('@/page/item')
+    },
+    {
+      path: '/score',
+      name: 'score',
+      component: () => import('@/page/score')
     }
   ]
 })

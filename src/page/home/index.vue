@@ -1,16 +1,21 @@
 <template>
-	<div class="home-container">
-		<item father-component='home'></item>
+	<div>
+		<item-container father-component='home'></item-container>
 	</div>
 </template>
 
 <script>
-	import item from '@/components/item'
+	import itemContainer from '@/components/item'
+
 	export default {
 		name: 'home',
 		components: {
-			item
-		} 
+			itemContainer
+		},
+		created() {
+			// 开始计时
+			this.$store.commit('REMEMBER_TIME');
+		}
 	}
 </script>
 

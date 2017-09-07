@@ -1,31 +1,47 @@
 <!-- 根据传入的参数进行判断渲染 -->
-
 <template>
 	<section>
 		<header class="header">
-			<span v-if="fatherComponent == 'home'" class="tip"></span>
-			<span v-if="fatherComponent == 'item'" class="tip"></span>
+			<span v-if="fatherComponent == 'home'" class="tip">{{level}}</span>
+			<span v-if="fatherComponent == 'item'" class="tip">题目{{itemNum}}</span>
 		</header>
 		<article>
 			<div v-if="fatherComponent == 'home'">
-				<router-link to='item'></router-link>
+				<router-link to='item' class='start'>开始</router-link>
 			</div>
 			<div v-if="fatherComponent == 'item'">
 				<div class="item-container">
 					<header class="item-title">
-
+						{{itemDetail[itemNum-1].topic_name}}
 					</header>
 					<ul class="item-list">
-						
+						<li v-for="(item, index) in itemDetail[itemNum-1].topic_answer"
+							@click="getChoose(index, item.is_standard_answer)" 
+							class="item-one" 
+						>
+							<span :class="{'item-active': chooseNum==index}">
+								{{chooseType(index)}}
+							</span>
+							<span class="item-answer">
+								{{item.answer_name}}
+							</span>
+						</li>
 					</ul>
+				</div>
+				<div>
+					<button v-if='itemNum < itemDetail.length' 
+						class="next-item"
+						@click='nextItem'>
+						下一题
+					</button>
+					<button v-else 
+						class="submit-item"
+						@click='submit'>
+						提交
+					</button>
 				</div>
 			</div>
 		</article>
-		<footer>
-			<button v-if='itemNum < itemDetail.length' class="start-item">开始</button>
-			<button v-else class="next-item">下一题</button>
-			<p class="timer">{{allTime}}</p>
-		</footer>
 	</section>
 </template>
 
@@ -46,8 +62,7 @@
 			'itemNum',
 			'level',
 			'itemDetail',
-			'timer',
-			'allTime'
+			'timer'
 		]),
 		methods: {
 			...mapActions([
@@ -83,14 +98,16 @@
 				} else {
 					alert('请选择答案才能提交噢！');
 				}
-			},
-			created() {
-				this.initData();
 			}
+		},
+		created() {
+			this.initData();
 		}
 	}
 </script>
 
 <style lang='scss' scoped>
-	
+	.item-active {
+		background: red;
+	}
 </style>
