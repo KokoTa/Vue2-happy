@@ -14,12 +14,12 @@ export default {
       transitionName: 'slide-right'
     }
   },
-  beforeRouteUpdate(to, from, next) {
-    alert(1)
-    const toDepth = to.path.split('/').length;
-    const fromDepth = from.path.split('/').length;
-    this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
-    next();
+  watch: { // 使用beforeRouteUpdate无效，原因参见文档
+    '$route'(to, from) {
+      const toDepth = to.path.length;
+      const fromDepth = from.path.length;
+      this.transitionName = toDepth < fromDepth ? 'slide-right' : 'slide-left';
+    }
   }
 }
 </script>
