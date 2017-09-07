@@ -1,6 +1,12 @@
-# learn
+# Vue2-happy
 
-> A Vue.js project
+> 一个用来复习Vue/Vue-router/Vuex的小项目
+
+## 吐槽
+健忘症有得治吗:sweat_smile:？
+
+## 效果
+![move](move.gif)
 
 ## Build Setup
 
