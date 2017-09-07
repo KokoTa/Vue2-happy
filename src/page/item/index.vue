@@ -11,6 +11,9 @@
 		name: 'item',
 		components: {
 			itemContainer
+		},
+		created() {
+			document.body.style.background ='#2CA4BF';
 		}
 	}
 </script>

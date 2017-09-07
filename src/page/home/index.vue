@@ -15,10 +15,11 @@
 		created() {
 			// 开始计时
 			this.$store.commit('REMEMBER_TIME');
+			document.body.style.background ='#A5E9DB';
 		}
 	}
 </script>
 
-<style lang='scss' scoped>
-	
+<style>
+
 </style>
